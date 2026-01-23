@@ -22,6 +22,8 @@ public class IdChallenge {
         System.out.println("what is your year of birth? ");
         yearOfBirth = Integer.parseInt(console.nextLine());
 
+        console.close();
+
         // normalizer
 
         String nameID = name.toUpperCase().substring(0, 2);
