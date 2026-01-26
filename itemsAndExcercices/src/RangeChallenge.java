@@ -11,6 +11,7 @@ public class RangeChallenge {
         System.out.println("Please enter a number between " + MIN + " and " + MAX + ": ");
 
         var dato = Integer.parseInt(console.nextLine());
+        console.close();
 
         boolean inRange = dato <= MAX && dato >= MIN;
 
