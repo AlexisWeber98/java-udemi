@@ -24,6 +24,8 @@ public class TicketVentaChallenge {
         System.out.println(" Precio Lechuga: ");
         precioLechuga = Double.parseDouble(console.nextLine());
 
+        console.close();
+
         // calcular subtotal sin impuestos
         subTotal = precioLeche + precioPan + precioLechuga;
         // calcular total con impuestos
