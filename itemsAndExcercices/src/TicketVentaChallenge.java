@@ -24,20 +24,31 @@ public class TicketVentaChallenge {
         System.out.println(" Precio Lechuga: ");
         precioLechuga = Double.parseDouble(console.nextLine());
 
+        System.out.println(" Aplicar algun descuento? (%)");
+        int descuentoPorcentaje = Integer.parseInt(console.nextLine());
+
         console.close();
 
         // calcular subtotal sin impuestos
         subTotal = precioLeche + precioPan + precioLechuga;
+
+        // cakcular descuento
+
+        double descuento = subTotal * descuentoPorcentaje / 100.0;
+
+        double subTotalConDescuento = subTotal - descuento;
+
         // calcular total con impuestos
-        total = subTotal + (subTotal * impuesto / 100);
+        total = subTotalConDescuento + (subTotalConDescuento * impuesto / 100);
 
         System.out.println(" ********** Ticket de venta ********** ");
 
         System.out.printf("""
-                Subtotal: %.2f
+                Subtotal: %.2f,
+                Subtotal Con descuento ( %.2f): %.2f
                 Impuesto: %.2f%%
                 Total: %.2f
-                """, subTotal, impuesto, total);
+                """, subTotal, descuento, subTotalConDescuento, impuesto, total);
 
     }
 }
