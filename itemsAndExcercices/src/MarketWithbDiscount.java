@@ -18,7 +18,7 @@ public class MarketWithbDiscount {
 
         console.close();
 
-        if (purchaseAmount > min && isMember) {
+        if (purchaseAmount >= min && isMember) {
             discount = 10;
 
         } else if (isMember) {
