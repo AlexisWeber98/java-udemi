@@ -20,18 +20,13 @@ public class FindYearStattion {
         month = console.nextInt();
 
         console.close();
-        if (month < 1 || month > 12)
-            System.out.println("Mes no valido");
-
-        if (month == 1 || month == 2 || month == 12) {
-            System.out.println("Es verano");
-
-        } else if (month == 3 || month == 4 || month == 5) {
-            System.out.println("Es otono");
-        } else if (month == 6 || month == 7 || month == 8) {
-            System.out.println("Es invierno");
-        } else {
-            System.out.println("Es primavera");
+        switch (month) {
+            case 1, 2, 12 -> System.out.println("Es verano");
+            case 3, 4, 5 -> System.out.println("Es otono");
+            case 6, 7, 8 -> System.out.println("Es invierno");
+            case 9, 10, 11 -> System.out.println("Es primavera");
+            default -> System.out.println("Mes no valido");
         }
+
     }
 }
