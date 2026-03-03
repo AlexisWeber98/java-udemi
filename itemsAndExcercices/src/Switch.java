@@ -7,6 +7,7 @@ public class Switch {
 
         Scanner console = new Scanner(System.in);
         int day = console.nextInt();
+        console.close();
 
         switch (day) {
             case 1:
