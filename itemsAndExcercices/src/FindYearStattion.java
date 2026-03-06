@@ -20,6 +20,8 @@ public class FindYearStattion {
         month = console.nextInt();
 
         console.close();
+
+        
         switch (month) {
             case 1, 2, 12 -> System.out.println("Es verano");
             case 3, 4, 5 -> System.out.println("Es otono");
