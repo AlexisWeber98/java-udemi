@@ -31,6 +31,7 @@ public class SendSistem {
             case "national" -> System.out.println("The national shipping cost is: $" + (weight * nationalCost));
             case "international" ->
                 System.out.println("The international shipping cost is: $" + (weight * internationalCost));
+            default -> System.out.println("Invalid destination");
         }
 
     }
