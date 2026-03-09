@@ -18,19 +18,19 @@ public class SendSistem {
         Scanner console = new Scanner(System.in);
 
         System.out.println(
-                "---------------------------------- please enter the destination (national/international) ----------------------------");
+                "----------------------------- please enter the destination (national/international) ----------------------------");
         String destiny = console.nextLine();
 
         System.out.println(
-                "---------------------------------- please enter the weight of the package in kg ----------------------------");
+                "----------------------------- please enter the weight of the package in kg ----------------------------");
         double weight = console.nextDouble();
 
         console.close();
 
         switch (destiny.toLowerCase()) {
-            case "national" -> System.out.println("The national shipping cost is: $" + (weight * nationalCost));
+            case "national" -> System.out.printf("The national shipping cost is: $%.2f%n", (weight * nationalCost));
             case "international" ->
-                System.out.println("The international shipping cost is: $" + (weight * internationalCost));
+                System.out.printf("The international shipping cost is: $%.2f%n", (weight * internationalCost));
             default -> System.out.println("Invalid destination");
         }
 
