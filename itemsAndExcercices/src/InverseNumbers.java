@@ -4,7 +4,9 @@ public class InverseNumbers {
         int counter = 15;
 
         do {
-            System.out.println("Counter value: " + counter);
+            if (counter % 2 != 0) {
+                System.out.println("Counter value unpair: " + counter);
+            }
             counter--;
 
         } while (counter >= 0);
