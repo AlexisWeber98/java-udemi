@@ -1,8 +1,11 @@
 public class For {
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 3; i++) {
+        for (int i = 1; i <= 50; i++) {
             System.out.println("i = " + i);
         }
+
+        System.out.println(" bueno, ia ta ia");
+
     }
 }
