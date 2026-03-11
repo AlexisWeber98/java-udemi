@@ -22,6 +22,8 @@ public class IterativeMenu {
 
                 case 2 -> System.out.println("Eliminando cuenta...\n");
 
+                case 3 -> System.out.println("Saliendo del menu... \n");
+
                 default -> System.out.println("Opcion no valida, elige una opcion del menu\n");
             }
         }
