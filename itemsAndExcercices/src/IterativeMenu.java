@@ -9,11 +9,13 @@ public class IterativeMenu {
 
         while (option != 3) {
 
-            System.out.println("Bienvenido al menu de iterativos, elige una opcion");
-            System.out.println("1. Crear cuenta");
-            System.out.println("2. Eliminar cuenta");
-            System.out.println("3. Salir");
-            System.out.println("Elige una opcion: ");
+            System.out.println("""
+                        Bienvenido al menu de iterativos, elige una opcion
+                        1. Crear cuenta
+                        2. Eliminar cuenta
+                        3. Salir
+                        Elige una opcion:
+                    """);
 
             option = console.nextInt();
 
