@@ -19,8 +19,12 @@ public class SecretNumber {
                 """);
         while (userGuess != secretNumber && attempts < 10) {
 
-            System.out.println("Intento número: " + (attempts + 1));
-            System.out.println("Ingresa tu suposición:");
+            System.out.printf("""
+                    Intento número: %d,
+
+                    Ingresa tu número:
+                      """, attempts + 1);
+
             userGuess = console.nextInt();
             attempts++;
 
