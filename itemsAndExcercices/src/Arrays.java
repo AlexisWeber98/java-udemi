@@ -49,7 +49,7 @@ public class Arrays {
 
         System.out.println("ingrese valores del  arreglo ");
         for (int i = 0; i < size; i++) {
-            System.out.println("ingrese el valor para la posicion " + i + ": ");
+            System.out.print("ingrese el valor para la posicion " + i + ": ");
             userNumbers[i] = console.nextInt();
         }
 
