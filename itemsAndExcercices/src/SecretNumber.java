@@ -23,6 +23,13 @@ public class SecretNumber {
             System.out.println("Ingresa tu suposición:");
             userGuess = console.nextInt();
             attempts++;
+
+            if (userGuess < secretNumber) {
+                System.out.println("El número secreto es mayor. Intenta de nuevo.");
+            } else if (userGuess > secretNumber) {
+                System.out.println("El número secreto es menor. Intenta de nuevo.");
+            }
+
         }
         console.close();
         if (userGuess == secretNumber) {
