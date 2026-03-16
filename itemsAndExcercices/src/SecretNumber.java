@@ -14,17 +14,22 @@ public class SecretNumber {
         System.out.println("""
                     ---------- ¡Bienvenido al juego de adivinar el número secreto! ----------
                     *** Adivina un número entre 1 y 50.
+
+                    Tienes 10 intentos para adivinar el número secreto. ¡Buena suerte! ***
                 """);
-        while (userGuess != secretNumber) {
+        while (userGuess != secretNumber && attempts < 10) {
 
             System.out.println("Intento número: " + (attempts + 1));
             System.out.println("Ingresa tu suposición:");
             userGuess = console.nextInt();
             attempts++;
-
         }
         console.close();
-        System.out.println("¡Felicidades! Adivinaste el número secreto en " + attempts + " intentos.");
+        if (userGuess == secretNumber) {
+            System.out.println("¡Felicidades! Adivinaste el número secreto en " + attempts + " intentos.");
+        } else {
+            System.out.println("Lo siento, no adivinaste el número secreto. Era: " + secretNumber);
+        }
 
     }
 }
