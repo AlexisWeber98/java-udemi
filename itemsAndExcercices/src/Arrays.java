@@ -29,5 +29,14 @@ public class Arrays {
         for (int i = 0; i < numbers2.length; i++) {
             System.out.println("elemento en la posicion " + i + ": " + numbers2[i]);
         }
+
+        // asignar un valores del arreglo
+
+        int[] numbers3 = { 1, 3, 5, 7, 9 };
+
+        for (int i = 0; i < numbers3.length; i++) {
+            System.out.println("elemento en la posicion " + i + ": " + numbers3[i]);
+        }
+
     }
 }
