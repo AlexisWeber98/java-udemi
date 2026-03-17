@@ -30,6 +30,21 @@ public class Matrix {
             }
         }
 
+        // sintaxis simplificada para recorrer una matriz
+        System.out.println("\n\nRecorrido simplificado:");
+
+        int[][] matrix2 = {
+                { 100, 200, 300 },
+                { 400, 500, 600 }
+        };
+
+        for (int ren = 0; ren < matrix2.length; ren++) {
+            for (int col = 0; col < matrix2[ren].length; col++) {
+                System.out.println("Valor en la posición [" + ren + "][" + col + "]: " + matrix2[ren][col]);
+            }
+
+        }
+
     }
 
 }
