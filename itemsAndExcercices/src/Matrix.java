@@ -16,6 +16,10 @@ public class Matrix {
         matrix[2][2] = 900;
 
         // imprimir los valores de la matriz
+
+        System.out.println("Valor en la posición [0][0]: " + matrix[0][0]);
+        System.out.println("Valor en la posición [1][1]: " + matrix[1][1]);
+        System.out.println("Valor en la posición [2][2]: " + matrix[2][2] + "\n\n");
         // imprimir la tabla completa (la matriz)
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
