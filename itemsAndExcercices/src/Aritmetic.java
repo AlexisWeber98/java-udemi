@@ -27,13 +27,6 @@ public class Aritmetic {
         sum.sum();
         sum.rest();
         System.out.println("\n----------------------\n");
-        // // ----------------------//
 
-        // Aritmetic challenge = new Aritmetic();
-        // challenge.operation1 = 12;
-        // challenge.operation2 = 16;
-
-        // challenge.sum();
-        // challenge.rest();
     }
 }
