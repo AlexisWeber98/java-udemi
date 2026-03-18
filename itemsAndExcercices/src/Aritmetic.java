@@ -3,7 +3,7 @@ public class Aritmetic {
     int operation2;
 
     public Aritmetic() {
-        System.out.println("Creating aritmetic object...");
+        System.out.println("Creating aritmetic object...\n");
     }
 
     public void sum() {
