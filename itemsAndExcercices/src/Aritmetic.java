@@ -2,6 +2,10 @@ public class Aritmetic {
     int operation1;
     int operation2;
 
+    public Aritmetic() {
+        System.out.println("Creating aritmetic object...");
+    }
+
     public void sum() {
         int result = operation1 + operation2;
         System.out.println("Sum: " + result);
