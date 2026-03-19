@@ -12,6 +12,8 @@ public class Aritmetic {
 
         this.operation1 = operation1;
         this.operation2 = operation2;
+
+        System.out.println("THIS: " + this);
     }
 
     // methods //
@@ -31,11 +33,18 @@ public class Aritmetic {
         Aritmetic aritmetic = new Aritmetic(5, 7);
         // aritmetic.operation1 = 20;
         // aritmetic.operation2 = 10;
+
         aritmetic.sum();
         aritmetic.rest();
         System.out.println("\n----------------------\n");
 
-        System.out.println(" memory path : " + aritmetic);
+        System.out.println("memory path : " + aritmetic);
+
+        //
+
+        Aritmetic aritmetic2 = new Aritmetic(10, 15);
+        aritmetic2.sum();
+        System.out.println("memory path : " + aritmetic2);
 
     }
 
