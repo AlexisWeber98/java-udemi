@@ -2,6 +2,8 @@ public class Aritmetic {
     int operation1;
     int operation2;
 
+    // constructors //
+
     public Aritmetic() {
         System.out.println("Creating aritmetic object...\n");
     }
@@ -11,6 +13,8 @@ public class Aritmetic {
         this.operation1 = operation1;
         this.operation2 = operation2;
     }
+
+    // methods //
 
     public void sum() {
         int result = this.operation1 + this.operation2;
@@ -22,13 +26,16 @@ public class Aritmetic {
         System.out.println("Rest: " + result);
     }
 
+    // -------------------------- MAIN --------------------------/
     public static void main(String[] args) {
-        Aritmetic sum = new Aritmetic(5, 7);
-        // sum.operation1 = 20;
-        // sum.operation2 = 10;
-        sum.sum();
-        sum.rest();
+        Aritmetic aritmetic = new Aritmetic(5, 7);
+        // aritmetic.operation1 = 20;
+        // aritmetic.operation2 = 10;
+        aritmetic.sum();
+        aritmetic.rest();
         System.out.println("\n----------------------\n");
+
+        System.out.println(" memory path : " + aritmetic);
 
     }
 
