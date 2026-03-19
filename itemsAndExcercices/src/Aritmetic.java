@@ -2,6 +2,10 @@ public class Aritmetic {
     int operation1;
     int operation2;
 
+    public Aritmetic() {
+        System.out.println("Creating aritmetic object...\n");
+    }
+
     public Aritmetic(int opt1, int opt2) {
 
         operation1 = opt1;
@@ -28,5 +32,13 @@ public class Aritmetic {
         sum.rest();
         System.out.println("\n----------------------\n");
 
+        Aritmetic aritmetic2 = new Aritmetic();
+        aritmetic2.sum();
+
+        aritmetic2.operation1 = 15;
+        aritmetic2.operation2 = 5;
+        aritmetic2.sum();
+
     }
+
 }
