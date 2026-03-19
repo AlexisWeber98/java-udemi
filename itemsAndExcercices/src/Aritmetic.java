@@ -6,21 +6,19 @@ public class Aritmetic {
         System.out.println("Creating aritmetic object...\n");
     }
 
-    public Aritmetic(int opt1, int opt2) {
+    public Aritmetic(int operation1, int operation2) {
 
-        operation1 = opt1;
-        operation2 = opt2;
-        System.out.println("Creating aritmetic object...\n");
-
+        this.operation1 = operation1;
+        this.operation2 = operation2;
     }
 
     public void sum() {
-        int result = operation1 + operation2;
+        int result = this.operation1 + this.operation2;
         System.out.println("Sum: " + result);
     }
 
     public void rest() {
-        int result = operation1 - operation2;
+        int result = this.operation1 - this.operation2;
         System.out.println("Rest: " + result);
     }
 
@@ -31,13 +29,6 @@ public class Aritmetic {
         sum.sum();
         sum.rest();
         System.out.println("\n----------------------\n");
-
-        Aritmetic aritmetic2 = new Aritmetic();
-        aritmetic2.sum();
-
-        aritmetic2.operation1 = 15;
-        aritmetic2.operation2 = 5;
-        aritmetic2.sum();
 
     }
 
