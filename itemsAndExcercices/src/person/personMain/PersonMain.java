@@ -26,5 +26,7 @@ public class PersonMain {
 
         System.out.print("Person edited: " + person2.getName() + " " + person2.getSurName() + "\n");
 
+        person2.showPerson();
+
     }
 }
