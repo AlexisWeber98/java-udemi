@@ -21,6 +21,8 @@ class Dog extends Animals {
     @Override
     protected void sleep() {
         System.out.println("I need sleep...");
+        System.out.println("method pather method: ");
+        super.sleep(); // This calls the sleep method of the parent class (Animals).
     }
 
 }
