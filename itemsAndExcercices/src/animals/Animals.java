@@ -18,6 +18,11 @@ class Dog extends Animals {
         System.out.println("Woof!");
     }
 
+    @Override
+    protected void sleep() {
+        System.out.println("I need sleep...");
+    }
+
 }
 
 class AnimalMain {
