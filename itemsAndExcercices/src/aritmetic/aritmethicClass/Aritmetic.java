@@ -1,4 +1,4 @@
-package aritmethic;
+package aritmetic.aritmethicClass;
 
 public class Aritmetic {
     private int operation1;

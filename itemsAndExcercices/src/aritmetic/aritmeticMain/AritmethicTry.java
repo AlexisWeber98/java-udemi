@@ -1,6 +1,6 @@
-package proof;
+package aritmetic.aritmeticMain;
 
-import aritmethic.Aritmetic;
+import aritmetic.aritmethicClass.Aritmetic;
 
 public class AritmethicTry {
 
