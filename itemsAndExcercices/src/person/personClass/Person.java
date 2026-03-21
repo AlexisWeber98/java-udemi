@@ -30,4 +30,9 @@ public class Person {
     public String getSurName() {
         return surName;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + this.name + " Surname: " + this.surName;
+    }
 }

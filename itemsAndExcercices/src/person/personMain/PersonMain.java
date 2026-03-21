@@ -15,6 +15,9 @@ public class PersonMain {
 
         System.out.print("Person edited: " + person1.getName() + " " + person1.getSurName() + "\n");
 
+        System.out.println(" To string method: " + person1.toString()); // This will call the toString method of the
+                                                                        // Person class.
+
         // --------------------------------------------------------------------------------------------------------//
 
         Person person2 = new Person("Pepe", "Pepazo");
