@@ -29,7 +29,7 @@ public class Product {
         return "Product: {" +
                 "idProduct=" + this.idProduct +
                 ", name='" + this.name + '\'' +
-                ", price=" + this.price +
+                ", price= $" + this.price +
                 '}';
     }
 }

@@ -17,7 +17,7 @@ public class SalesSystem {
         order1.addProduct(product1);
         order1.addProduct(product2);
 
-        order1.showOrder();
+        System.out.println("Order 1 details: \n" + order1.toString());
 
         // -------------------------- Order 2 -------------------- //
 
@@ -26,6 +26,7 @@ public class SalesSystem {
         order2.addProduct(product2);
         order2.addProduct(product3);
 
-        order2.showOrder();
+        System.out.println("Order 2 details: \n" + order2.toString());
+
     }
 }

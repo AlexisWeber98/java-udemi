@@ -32,15 +32,30 @@ public class Order {
 
     }
 
-    public void showOrder() {
-        System.out.println("Order ID: " + this.orderId);
+    // public void showOrder() {
+    // System.out.println("Order ID: " + this.orderId);
 
-        System.out.println("total order: " + this.total());
+    // System.out.println("total order: " + this.total());
 
-        System.out.println("\tProducts in the order:");
+    // System.out.println("\tProducts in the order:");
+
+    // for (int i = 0; i < this.productsCount; i++) {
+    // System.out.println("\t\t" + this.products[i].toString());
+    // }
+    // }
+
+    @Override
+    public String toString() {
+
+        String result = "Order ID: " + this.orderId + "\n" +
+                "Total order: $" + this.total() + "\n" +
+                "\tProducts in the order:\n";
 
         for (int i = 0; i < this.productsCount; i++) {
-            System.out.println("\t\t" + this.products[i].toString());
+            result += "\t\t" + this.products[i].toString() + "\n";
         }
+
+        return result;
+
     }
 }
