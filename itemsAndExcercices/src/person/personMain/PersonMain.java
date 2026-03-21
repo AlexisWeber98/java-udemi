@@ -5,8 +5,6 @@ import person.personClass.Person;
 public class PersonMain {
     public static void main(String[] args) {
 
-        System.out.println("Creating person...");
-
         Person person1 = new Person("Jacinnto", "Gomez");
         System.out.println("Person created: " + person1.getName() + " " + person1.getSurName());
 
@@ -18,11 +16,16 @@ public class PersonMain {
         System.out.println(" To string method: " + person1.toString()); // This will call the toString method of the
                                                                         // Person class.
 
-        // --------------------------------------------------------------------------------------------------------//
+        // System.out.println("Show father method toString: " + super.toString());
+
+        // print static variable personCount
+        System.out.println("Number of people created: " + person1.personCount());
+
+        System.out.println(" ----------------------------------------------- ");
 
         Person person2 = new Person("Pepe", "Pepazo");
 
-        System.out.println("Creating person..." + person2.getName() + " " + person2.getSurName());
+        System.out.println("Creating person...2   " + person2.getName() + " " + person2.getSurName());
 
         person2.setName("Juan");
         person2.setSurName("Gomez");
@@ -30,6 +33,7 @@ public class PersonMain {
         System.out.print("Person edited: " + person2.getName() + " " + person2.getSurName() + "\n");
 
         person2.showPerson();
+        System.out.println("Number of people created: " + person2.personCount());
 
     }
 }

@@ -3,10 +3,12 @@ package person.personClass;
 public class Person {
     private String name;
     private String surName;
+    static int personCount = 0;
 
     public Person(String name, String surName) {
         this.name = name;
         this.surName = surName;
+        Person.personCount++;
     }
 
     public void showPerson() {
@@ -29,6 +31,10 @@ public class Person {
 
     public String getSurName() {
         return surName;
+    }
+
+    public String personCount() {
+        return "Number of people created: " + Person.personCount;
     }
 
     @Override
