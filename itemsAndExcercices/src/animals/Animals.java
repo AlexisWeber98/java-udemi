@@ -10,8 +10,8 @@ public class Animals {
         System.out.println("Sleeping...");
     }
 
-    protected String makeSound(String sound) {
-        return sound;
+    protected void makeSound() {
+        System.out.println("Some generic animal sound");
     }
 
 }
@@ -30,22 +30,21 @@ class Dog extends Animals {
     }
 
     @Override
-    protected String makeSound(String sound) {
-        return "Dog says: " + sound;
-
+    protected void makeSound() {
+        System.out.println("Dog says: Woof!");
     }
 }
 
 class Cat extends Animals {
     @Override
-    protected String makeSound(String sound) {
-        return "Cat says: " + sound;
+    protected void makeSound() {
+        System.out.println("Cat says: Meow!");
     }
 }
 
 class animalTest {
     void printSound(Animals animal) {
-        System.out.println(animal.makeSound("Some sound"));
+        animal.makeSound();
     }
 }
 
@@ -70,7 +69,7 @@ class AnimalMain {
         System.out.println("methods inherited from the Animals class:");
         dog1.eat();
         dog1.sleep();
-        System.out.println(dog1.makeSound("Whooff!"));
+        dog1.makeSound();
 
         System.out.println("own method of the Dog class:");
         dog1.bark();
@@ -78,16 +77,16 @@ class AnimalMain {
         // ------------------------------- Animal 2 ----------------------------------//
 
         // Animals animal2 = new Animals();
-        // System.out.println(animal2.makeSound("grrr"));
+        // animal2.makeSound();
         // }
 
         // Animals animal2 = new Dog();
-        // System.out.println(animal2.makeSound("Whooff!")); // This will call the
+        // animal2.makeSound(); // This will call the
         // makeSound method of the Dog class due to
         // polymorphism.
 
         Animals animal2 = new Cat();
-        System.out.println(animal2.makeSound("Meow!")); // This will call the makeSound method of the Cat class due to
-                                                        // polymorphism.
+        animal2.makeSound(); // This will call the makeSound method of the Cat class due to
+                             // polymorphism.
     }
 }
