@@ -30,7 +30,7 @@ public class PersonMain {
         person2.setName("Juan");
         person2.setSurName("Gomez");
 
-        System.out.print("Person edited: " + person2.getName() + " " + person2.getSurName() + "\n");
+        person2.toString();
 
         person2.showPerson();
         System.out.println("Number of people created: " + person2.personCount());

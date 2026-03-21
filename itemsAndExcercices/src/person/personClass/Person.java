@@ -4,11 +4,12 @@ public class Person {
     private String name;
     private String surName;
     static int personCount = 0;
+    private int uniqueId;
 
     public Person(String name, String surName) {
         this.name = name;
         this.surName = surName;
-        Person.personCount++;
+        this.uniqueId = ++Person.personCount;
     }
 
     public void showPerson() {
@@ -39,6 +40,10 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Name: " + this.name + " Surname: " + this.surName;
+        return "Name: " + this.name + " Surname: " + this.surName + " Unique ID: " + this.uniqueId;
+    }
+
+    public int getUniqueId() {
+        return this.uniqueId;
     }
 }
