@@ -48,7 +48,7 @@ class animalTest {
     }
 }
 
-// -------------------------------------------------------------------------//
+// --------------------------- MAIN --------------------------- //
 
 class AnimalMain {
     public static void main(String[] args) {
@@ -58,6 +58,7 @@ class AnimalMain {
         Animals animal1 = new Animals();
         animal1.eat();
         animal1.sleep();
+        animal1.makeSound();
 
         // animal1.bark(); This will cause a compile-time error because the Animals
         // class does not have the bark method.
@@ -76,7 +77,7 @@ class AnimalMain {
         System.out.println("own method of the Dog class:");
         dog1.bark();
 
-        // ------------------------------- Animal 2 ----------------------------------//
+        // ------------------------------- Cat ----------------------------------//
 
         // Animals animal2 = new Animals();
         // animal2.makeSound();
@@ -87,8 +88,8 @@ class AnimalMain {
         // makeSound method of the Dog class due to
         // polymorphism.
 
-        Animals animal2 = new Cat();
-        animal2.makeSound(); // This will call the makeSound method of the Cat class due to
-                             // polymorphism.
+        Animals cat = new Cat();
+        cat.makeSound(); // This will call the makeSound method of the Cat class due to
+                         // polymorphism.
     }
 }
