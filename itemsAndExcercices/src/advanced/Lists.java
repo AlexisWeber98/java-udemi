@@ -17,9 +17,21 @@ public class Lists {
         myList.add("Sunday");
         myList.add("Sunday"); // List allows duplicate elements
 
-        for (String element : myList) {
-            System.out.println(element);
-        }
+    /*
+    for (String element : myList) {
+    System.out.println(element);
+    }*/
+        myList.forEach(element -> {
+            System.out.println("Element Day: " + element);
+        });
+
+        myList.forEach(System.out::println);
+
+
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve");
+
+        System.out.println("\nNames in the list:\n");
+        names.forEach(System.out::println);
     }
 
 }
