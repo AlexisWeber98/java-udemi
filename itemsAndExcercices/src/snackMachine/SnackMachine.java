@@ -1,7 +1,5 @@
 package snackMachine;
 
-import com.sun.jdi.request.ExceptionRequest;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -52,7 +50,7 @@ public class SnackMachine {
         switch (option) {
             case 1 -> buySnack(console, products);
             case 2 -> showTicket(products);
-            //case 3 -> addSnack(console, products);
+            case 3 -> addSnack(console);
             case 4 -> exit = true;
             default -> System.out.println("Invalid option. Please try again.");
         }
@@ -93,7 +91,17 @@ public class SnackMachine {
 
     }
 
+    private static void addSnack (Scanner console){
+        console.nextLine(); // Consumir salto de línea pendiente
+        System.out.print("Enter the name of the snack: ");
+        String name = console.nextLine();
 
+        System.out.print("Enter the price of the snack: ");
+        double price = console.nextDouble();
 
+        Snacks.addSnack(new Snack(name, price));
+        System.out.println("Snack "+ name + " added successfully!");
+        Snacks.showSnacks();
+    }
 
 }
