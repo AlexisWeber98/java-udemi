@@ -51,7 +51,10 @@ public class SnackMachine {
             case 1 -> buySnack(console, products);
             case 2 -> showTicket(products);
             case 3 -> addSnack(console);
-            case 4 -> exit = true;
+            case 4 ->{
+                System.out.println("Thank you for using the Snack Machine. Goodbye!");
+                exit = true;
+            }
             default -> System.out.println("Invalid option. Please try again.");
         }
 
