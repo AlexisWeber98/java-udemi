@@ -61,7 +61,7 @@ this.addSnack(new Snack("chocolate", 3));
         try {
             append = file.exists();
             PrintWriter outputFile = new PrintWriter(new FileWriter(file, append));
-            outputFile.println(snack);
+            outputFile.println(snack.writeSnack());
             outputFile.close();
         }catch (Exception exception) {
             System.out.println("An error occurred while writing to the file: " + exception.getMessage());

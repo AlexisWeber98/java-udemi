@@ -53,6 +53,10 @@ public class Snack implements Serializable {
                 " }";
     }
 
+    public String writeSnack() {
+        return idSnack + "," + name + "," + price;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
