@@ -1,4 +1,4 @@
-package snackMachine;
+package snackMachine.domain;
 
 import java.io.Serializable;
 import java.util.Objects;

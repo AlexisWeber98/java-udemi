@@ -1,9 +1,12 @@
-package snackMachine;
+package snackMachine.services;
+
+import snackMachine.domain.Snack;
+import snackMachine.services.ISnacksService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Snacks {
+public class SnacksService implements ISnacksService {
     private  static final List<Snack> snacks;
 
     // bloque estatico inicializador
@@ -16,11 +19,11 @@ public class Snacks {
         snacks.add( new Snack("Chocolate", 3));
     }
 
-    public static void addSnack (Snack snack) {
+    public  void addSnack (Snack snack) {
         snacks.add(snack);
     }
 
-    public static void showSnacks() {
+    public  void showSnacks() {
         String inventory= "";
         for (Snack snack : snacks) {
             inventory += snack.toString() + "\n";
@@ -30,7 +33,7 @@ public class Snacks {
 
     }
 
-    public static List<Snack> getSnacks() {
+    public  List<Snack> getSnacks() {
         return snacks;
     }
 }
