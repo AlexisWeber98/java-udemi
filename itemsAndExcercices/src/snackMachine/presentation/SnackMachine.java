@@ -2,7 +2,7 @@ package snackMachine.presentation;
 
 import snackMachine.domain.Snack;
 import snackMachine.services.ISnacksService;
-import snackMachine.services.SnacksService;
+import snackMachine.services.SnackFileService;
 
 import java.util.List;
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public class SnackMachine {
         boolean exit = false;
         Scanner console = new Scanner(System.in);
         // create product snacks list
-        ISnacksService snacksService = new SnacksService();
+        ISnacksService snacksService = new SnackFileService();
 
         List<Snack> products = new ArrayList<>();
 
