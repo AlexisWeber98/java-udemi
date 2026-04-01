@@ -1,8 +1,8 @@
 package snackMachine;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class SnackMachine {
     public static void main(String[] args) {
@@ -39,7 +39,6 @@ public class SnackMachine {
                 2. show ticket
                 3. add a snack
                 4. exit
-                
                 please enter the number of the option you want to select: \s
                 """);
         return  console.nextInt();
