@@ -5,6 +5,8 @@ import snackMachine.domain.Snack;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +23,7 @@ public class SnackFileService implements  ISnacksService {
 
         try {
             if (fileExists){
-                //this.snaks = loadSnacksFromFile();
+                this.snacks = loadSnacksFromFile();
             } else {
 
                 PrintWriter outputFile = new PrintWriter(new FileWriter(file));
@@ -40,9 +42,31 @@ public class SnackFileService implements  ISnacksService {
     }
 
     private void loadInitialSnacks() {
-this.addSnack(new Snack("papas", 2.5));
-this.addSnack(new Snack("gaseosa", 4));
-this.addSnack(new Snack("chocolate", 3));
+        this.addSnack(new Snack("papas", 2.5));
+        this.addSnack(new Snack("gaseosa", 4));
+        this.addSnack(new Snack("chocolate", 3));
+    }
+
+    private List<Snack>loadSnacksFromFile () {
+        List snacks = new ArrayList<Snack>();
+
+        try {
+            List <String> lines = Files.readAllLines(Paths.get(FILE_NAME));
+
+            for (String line: lines) {
+              String[] snackLine =  line.split(",");
+              String idSnack = snackLine[0];
+              String nameSnack = snackLine[1];
+              double  priceSnack = Double.parseDouble(snackLine[2]);
+              Snack snack = new Snack(nameSnack, priceSnack);
+              snacks.add(snack);
+            }
+
+        } catch (Exception exception) {
+            System.out.println("An error occurred while loading snacks: " + exception.getMessage());
+            exception.printStackTrace();
+        }
+        return snacks;
     }
 
 

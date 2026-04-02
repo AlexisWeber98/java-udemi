@@ -66,7 +66,10 @@ public class Snack implements Serializable {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(idSnack, name, price);
     }
+
+
 }
 
