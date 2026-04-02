@@ -95,6 +95,12 @@ public class SnackFileService implements  ISnacksService {
 
     @Override
     public void showSnacks() {
+        System.out.println("---------- Available snacks -----------");
+        String snackList = "";
+        for (Snack snack : this.snacks) {
+            snackList += snack.toString() + "\n";
+        }
+    System.out.println(snackList);
 
     }
 
