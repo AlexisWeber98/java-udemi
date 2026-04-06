@@ -13,7 +13,7 @@ import static zona_fit.connection.ConnectionDb.getConnection;
 
 public class ClientDAO implements IClientDAO {
     @Override
-    public List<Client> getAllClients() {
+    public  List<Client> getAllClients() {
         List<Client> clients = new ArrayList<>();
         PreparedStatement ps;
         ResultSet rs;
@@ -144,6 +144,23 @@ public class ClientDAO implements IClientDAO {
 
     @Override
     public boolean deleteClient(Client client) {
+        PreparedStatement ps;
+        Connection conn = getConnection();
+        String sql = "DELETE FROM client WHERE id=?";
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, client.getId());
+            ps.execute();
+            return true;
+        } catch (Exception e) {
+            System.out.println("Error deleting client: " + e.getMessage());
+        } finally {
+            try {
+                conn.close();
+            } catch (Exception e) {
+                System.out.println("Error closing connection: " + e.getMessage());
+            }
+        }
         return false;
     }
 }
