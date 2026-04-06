@@ -82,9 +82,6 @@ public class ZonaFitApp {
                 } else {
                     System.out.println("Failed to add client: " + name + " " + lastName);
                 }
-
-
-
             }
             case 4 -> {
                 System.out.println("Enter the client ID to update:");
@@ -107,8 +104,6 @@ public class ZonaFitApp {
                 } else {
                     System.out.println("Failed to update client with ID: " + id);
                 }
-
-
             }
             case 5 -> {
                 System.out.println("Enter the client ID to delete:");
@@ -121,7 +116,6 @@ public class ZonaFitApp {
                 } else {
                     System.out.println("Failed to delete client with ID: " + id);
                 }
-
             }
 
             case 6 -> {
@@ -130,10 +124,7 @@ public class ZonaFitApp {
             }
             default -> {
                 System.out.println("Invalid option. Please try again.");
-
-
             }
-
         }
 
         return exit;
