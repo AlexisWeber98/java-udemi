@@ -122,13 +122,20 @@ public class ClientDAO implements IClientDAO {
             ps.setInt(3, client.getMembership());
             ps.setInt(4, client.getId());
             ps.execute();
+
             return true;
+
         } catch (Exception e) {
+
             System.out.println("Error updating client");
+
         } finally {
+
             try {
                 conn.close();
+
             } catch (Exception e) {
+
                 System.out.println("Error closing connection");
             }
         }
