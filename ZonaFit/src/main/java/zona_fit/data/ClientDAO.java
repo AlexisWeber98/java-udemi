@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
 import static zona_fit.connection.ConnectionDb.getConnection;
 
 public class ClientDAO implements IClientDAO {
@@ -110,6 +111,27 @@ public class ClientDAO implements IClientDAO {
 
     @Override
     public boolean updateClient(Client client) {
+        PreparedStatement ps;
+        Connection conn = getConnection();
+        String sql = "UPDATE client SET name=?, lastName=?, membership=? " + "WHERE id=?";
+
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, client.getName());
+            ps.setString(2, client.getLastName());
+            ps.setInt(3, client.getMembership());
+            ps.setInt(4, client.getId());
+            ps.execute();
+            return true;
+        } catch (Exception e) {
+            System.out.println("Error updating client");
+        } finally {
+            try {
+                conn.close();
+            } catch (Exception e) {
+                System.out.println("Error closing connection");
+            }
+        }
         return false;
     }
 
