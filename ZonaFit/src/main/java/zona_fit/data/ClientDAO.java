@@ -28,7 +28,7 @@ public class ClientDAO implements IClientDAO {
                 Client client = new Client();
                 client.setId(rs.getInt("id"));
                 client.setName(rs.getString("name"));
-                client.setLastName(rs.getString("last_name"));
+                client.setLastName(rs.getString("lastName"));
                 client.setMembership(rs.getInt("membership"));
                 clients.add(client);
 
@@ -73,7 +73,7 @@ public class ClientDAO implements IClientDAO {
                 conn.close();
             } catch (Exception e) {
                 System.out.println( "Error al cerrar la conexión: " + e.getMessage());
-                throw new RuntimeException(e);
+
             }
         }
         return false;
@@ -81,7 +81,31 @@ public class ClientDAO implements IClientDAO {
 
     @Override
     public boolean addClient(Client client) {
-        return false;
+
+        PreparedStatement ps;
+
+        Connection conn = getConnection();
+
+        String sql = "INSERT INTO client(name, lastName, membership) VALUES(?, ?, ?)";
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, client.getName());
+            ps.setString(2, client.getLastName());
+            ps.setInt(3, client.getMembership());
+            ps.execute();
+            return true;
+        } catch (Exception e) {
+            System.out.println("Error al agregar el cliente: " + e.getMessage());
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                conn.close();
+            } catch (Exception e) {
+                System.out.println("Error al cerrar la conexión: " + e.getMessage());
+
+            }
+        }
+
     }
 
     @Override
