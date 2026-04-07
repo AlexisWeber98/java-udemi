@@ -76,6 +76,7 @@ public class ZonaFitApp {
                 int membership = Integer.parseInt(console.nextLine().trim());
 
                 boolean addedClient = clientDAO.addClient(new Client(name, lastName, membership));
+
                 if (addedClient){
                     System.out.println("Client added successfully.");
                     System.out.println("Client added: " + name + " " + lastName);
