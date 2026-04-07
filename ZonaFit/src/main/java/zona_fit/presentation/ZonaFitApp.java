@@ -57,7 +57,7 @@ public class ZonaFitApp {
 
             }
             case 2 ->{
-
+                System.out.println( "\n---------------------------  Find Client by ID ------------------------ \n");
                 System.out.println("Enter the client ID to find:");
                 int id = Integer.parseInt(console.nextLine().trim());
                 var clientToFind = new Client(id);
@@ -66,6 +66,7 @@ public class ZonaFitApp {
 
             }
             case 3 ->{
+                    System.out.println( "\n---------------------------  Add Client ------------------------ \n");
                 System.out.println("Enter the client's name:");
                 String name = console.nextLine().trim();
 
@@ -85,6 +86,7 @@ public class ZonaFitApp {
                 }
             }
             case 4 -> {
+                System.out.println( "\n---------------------------  Update Client ------------------------ \n");
                 System.out.println("Enter the client ID to update:");
                 int id = Integer.parseInt(console.nextLine().trim());
 
@@ -107,6 +109,7 @@ public class ZonaFitApp {
                 }
             }
             case 5 -> {
+                System.out.println( "\n---------------------------  Delete Client ------------------------ \n");
                 System.out.println("Enter the client ID to delete:");
                 int id = Integer.parseInt(console.nextLine().trim());
                 var clientToDelete = new Client(id);
@@ -120,6 +123,7 @@ public class ZonaFitApp {
             }
 
             case 6 -> {
+                System.out.println("\n---------------------------  Exit ------------------------ \n");
                 System.out.println("Thanks you for use Zona Fit. ¡See you soon!");
                 exit = true;
             }
