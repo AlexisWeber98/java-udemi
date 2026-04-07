@@ -123,9 +123,9 @@ public class ZonaFitApp {
                 System.out.println("Thanks you for use Zona Fit. ¡See you soon!");
                 exit = true;
             }
-            default -> {
-                System.out.println("Invalid option. Please try again.");
-            }
+
+            default -> System.out.println("Invalid option. Please try again.");
+
         }
 
         return exit;
