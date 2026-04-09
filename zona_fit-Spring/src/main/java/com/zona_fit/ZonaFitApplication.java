@@ -97,6 +97,7 @@ logger.info (" -----------------------  Welcome to Zona Fit App ----------------
 				newClient.setMembership(console.nextInt());
 				console.nextLine();
 				clientService.saveClient(newClient);
+				logger.info ("Client created successfully: \n" + newClient.toString());
 			}
 			case 4 -> {
 				logger.info(" -----------------------  Update client --------------------- ");
