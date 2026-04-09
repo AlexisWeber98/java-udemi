@@ -49,7 +49,14 @@ logger.info (" -----------------------  Welcome to Zona Fit App ----------------
 		 System.out.println("5. Delete client");
 		 System.out.println("6. Exit");
 		 logger.info(" -----------------------  Select an option --------------------- ");
-		return Integer.parseInt(console.nextLine());
+
+		 try {
+			 return Integer.parseInt(console.nextLine());
+		 } catch (NumberFormatException ex) {
+			 logger.warn("Invalid input. Please enter a number.");
+			 return -1;
+		 }
+
 	 }
 
 	 private boolean executeOptions  (int option, Scanner console) {
