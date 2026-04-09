@@ -2,6 +2,7 @@ package com.zona_fit;
 
 import com.zona_fit.model.Client;
 import com.zona_fit.service.IClientService;
+import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class ZonaFitApplication  implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String @NonNull ... args) throws Exception {
 		zonaFitApp();
 	}
 
@@ -97,24 +98,28 @@ logger.info (" -----------------------  Welcome to Zona Fit App ----------------
 				newClient.setMembership(console.nextInt());
 				console.nextLine();
 				clientService.saveClient(newClient);
-				logger.info ("Client created successfully: \n" + newClient.toString());
+                logger.info("Client created successfully: \n{}", newClient.toString());
 			}
 			case 4 -> {
 				logger.info(" -----------------------  Update client --------------------- ");
 
-					Client updateClient = new Client();
-					System.out.println("Enter client id: ");
-					updateClient.setId(console.nextInt());
-					console.nextLine();
-					System.out.println("Enter name: ");
-					updateClient.setName(console.nextLine());
-					System.out.println("Enter last name: ");
-					updateClient.setLastName(console.nextLine());
-					System.out.println("Enter membership: ");
-					updateClient.setMembership(console.nextInt());
-					console.nextLine();
-					clientService.saveClient(updateClient);
-					logger.info ("Client updated successfully: \n" + updateClient.toString());
+
+					logger.info("Enter client id: ");
+					Client client = clientService.getClientById(Integer.parseInt(console.nextLine()));
+					 if (client != null) {
+						 logger.info ("Client found: \n{}", client.toString());
+						 logger.info("Enter name: ");
+						 String name = console.nextLine();
+						 client.setName(name);
+						 logger.info("Enter last name: ");
+						 client.setLastName(console.nextLine());
+						 logger.info("Enter membership: ");
+						 client.setMembership(console.nextInt());
+						 clientService.saveClient(client);
+                         logger.info("Client updated successfully: \n{}", client.toString());
+					 }
+					 return false;
+
 
 		}
 
