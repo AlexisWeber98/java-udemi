@@ -114,6 +114,7 @@ logger.info (" -----------------------  Welcome to Zona Fit App ----------------
 					updateClient.setMembership(console.nextInt());
 					console.nextLine();
 					clientService.saveClient(updateClient);
+					logger.info ("Client updated successfully: \n" + updateClient.toString());
 
 		}
 
@@ -126,6 +127,7 @@ logger.info (" -----------------------  Welcome to Zona Fit App ----------------
 					console.nextLine();
 
 					clientService.deleteClient(deleteClient);
+					logger.info ("Client deleted successfully: \n" + deleteClient.toString());
 
 				}
 
