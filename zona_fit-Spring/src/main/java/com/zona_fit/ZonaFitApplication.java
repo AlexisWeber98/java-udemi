@@ -128,9 +128,12 @@ logger.info (" -----------------------  Welcome to Zona Fit App ----------------
 
 					Client deleteClient = new Client();
 					System.out.println("Enter client id: ");
-					deleteClient.setId(console.nextInt());
-					console.nextLine();
-
+				    Client client =	clientService.getClientById(Integer.parseInt(console.nextLine()));
+					if  (client == null) {
+						logger.info("Client not found");
+						return false;
+					}
+					deleteClient.setId(client.getId());
 					clientService.deleteClient(deleteClient);
 					logger.info ("Client deleted successfully: \n" + deleteClient.toString());
 
